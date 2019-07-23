@@ -4,7 +4,7 @@
    */
 
 function toCelsius(fahrenheit) {
-    return 5 / 9 * fahrenheit - 32;
+    return (9/5) * fahrenheit + 32;
 }
 
 /* 
@@ -13,9 +13,10 @@ each string and return the longer of the two
 */
 function longerString(str1, str2) {
     if (str1 > str2) {
-        return str2;
-    } else {
         return str1;
+    }
+    else {
+        return str2;
     }
 }
 
@@ -25,8 +26,8 @@ function longerString(str1, str2) {
 */
 
 function append(array, element) {
-    array = element;
-    return [array];
+    array.push(element);
+    return array;
 }
 
 
@@ -35,9 +36,9 @@ function append(array, element) {
 */
 
 function triangleSum(n) {
-    var sum;
-    for (var i; i < n; i++) {
-        sum + i;
+    var sum = 0;
+    for (var i = 1; i <= n; i++) {
+        sum += i;
     }
     return sum;
 }
@@ -46,12 +47,11 @@ function triangleSum(n) {
 /* This function should return the sum of all numbers in an array */
 
 function sumArray(array) {
-
-    for (var i = 0; i < array.length - 1; i++) {
-        var total = 0
+    var total = 0
+    for (var i = 0; i < array.length; i++) {
         total += array[i];
-        return total;
     }
+    return total;
 }
 
 
@@ -61,12 +61,13 @@ function sumArray(array) {
 
 function findValueInObject(obj, valueToFind) {
     for (var key in obj) {
-        if (key === valueToFind) {
+        if (obj[key] === valueToFind) {
             return true;
-        } else {
-            return false;
         }
     }
+
+    return false;
+
 }
 
 
@@ -80,18 +81,20 @@ function largestArray(array1, array2) {
     var largestInArray2 = array2[0];
 
     for (var i = 1; i < array1.length; i++) {
-        if (largestInArray1 > array1[i]) {
+        if (largestInArray1 < array1[i]) {
             largestInArray1 = array1[i];
         }
     }
-    for (var j = 0; j < array2.length; j++) {
-        if (largestInArray2 <= array2[i]) {
-            largestInArray2 = array2[i];
+    for (var j = 1; j < array2.length; j++) {
+        if (largestInArray2 <= array2[j]) {
+            largestInArray2 = array2[j];
         }
     }
 
     if (largestInArray1 > largestInArray2) {
-        return largest1
+        return array1;
+    } else {
+        return array2;
     }
 
 }
@@ -103,10 +106,10 @@ create / return a reversed copy of that Array
 
 function makeReversedArray(someArray) {
     var reversedArray = [];
-    for (var i = 0; i <= reversedArray.length; i++) {
+    for (var i = someArray.length - 1; i >= 0; i--) {
         reversedArray.push(someArray[i]);
-        return reversedArray;
     }
+    return reversedArray;
 }
 
 
@@ -215,4 +218,3 @@ function testSolutions() {
     expected = ['c', 'b', 'a'];
     console.log('expected: ' + expected);
 }
-
