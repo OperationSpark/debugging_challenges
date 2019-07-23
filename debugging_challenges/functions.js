@@ -1,3 +1,8 @@
+/* 
+This file is full of Syntax Errors, fix all syntax errors before
+attempting to fix the Logical Errors
+*/
+
 // Fix Me 1:
 
 function isEven(num) {
