@@ -164,8 +164,8 @@ function testSolutions() {
 
   console.log("\ntriangleSum");
   // triangleSum
-  returned = triangleSum([1,2,3,4]);
-  console.log("triangleSum([1,2,3,4]) returned: " + returned);
+  returned = triangleSum(4);
+  console.log("triangleSum(4) returned: " + returned);
 
   expected = 10;
   console.log('expected: ' + expected);
