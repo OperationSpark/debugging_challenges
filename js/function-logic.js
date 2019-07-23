@@ -148,7 +148,7 @@ function testSolutions() {
 
   console.log("\nappend");
   // Append
-  returned = append([1, 2, 3]);
+  returned = append([1, 2, 3], 4);
   console.log("append([1,2,3], 4) returned: " + returned);
 
   expected = [1, 2, 3, 4];
